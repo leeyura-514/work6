@@ -1,0 +1,46 @@
+.sc-title{
+    text-align: center;
+    font-size: 30px;
+    // line-height: 70px;
+    padding-top: 100px;
+    .sc-visual &{
+        font-size: 6vw;
+        padding: 1em;
+        font-weight: normal;
+        text-align: left;
+        span{
+            display: inline-block;
+        }
+    }//visual
+
+    @include tablet {
+        font-size: 25px;
+    }
+    @include mobile {
+        padding-top: 60px;
+        font-size: 20px;
+    }
+}
+
+.sub-title{
+    padding: 33px 20px 80px;
+    font-size: 22px;
+    line-height: 1.5;
+    // padding: 0 300px;
+    max-width: 644px;
+    margin: 0 auto;
+    .sc-introduce &{
+        text-align: center;
+    }
+    @include laptop {
+        font-size: 18px;
+    }
+    @include tablet {
+        font-size: 15px;
+        padding: 33px 20px 20px;
+    }
+    @include mobile {
+        font-size: 13px;
+        padding-top: 25px;
+    }
+}

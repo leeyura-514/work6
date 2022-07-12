@@ -1,0 +1,191 @@
+.header-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 100;
+    transition: .5s;
+    height: 55px;
+    @include laptop {
+        padding: 5px 10px;
+        height: 40px;
+    }
+    &.active{
+        top: -55px;
+    }
+    a{
+        &:hover{
+            color: #dc2828;
+        }
+    }
+    .logo-box{
+        width: 25%;
+        display: flex;
+        align-content: center;
+        padding-top: 10px;
+        .logo{
+            background-position: center;
+            width: 100px; height: 25px;
+            @include laptop {
+                width: 70px; height: 20px;
+            }
+            a{
+                display: block;
+                height: 100%;
+                flex: 1;
+            }
+        }
+    }//logo-box
+    .login-box{
+        display: flex;
+        justify-content: flex-end;
+        flex: 1;
+        width: 30%;
+        font-weight: bold;
+        a{
+            display: block;
+            height: 100%;
+            padding-left: 10px;
+            @include laptop {
+                display: none;
+            }
+        }
+    }//login-box
+    .btn-open{
+        display: none;
+        position: relative;
+        padding: 20px;
+        @include tablet {
+            display: block;
+        }
+        span{
+            background: #dc2828;
+            position: absolute;
+            right: 10px;
+            top: 14px;
+            width: 20px;
+            height: 2px;
+            &:nth-child(2n){
+                top: 22px;
+            }
+        }
+        
+       
+
+    }//btn-open
+}//header-area
+
+.gnb-list{
+    // background: #f00;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    flex: 2;
+    .gnb-item{
+        a{
+            display: block;
+            padding: 5px 20px;
+            min-width: 130px;
+            text-align: center;
+            font-size: 15px;
+            @include laptop {
+                font-size: 14px;
+                min-width: 90px;
+                padding: 5px 0;
+            }
+            @include tablet {
+               display: none;
+            }
+        }
+    }
+}//gnb-list
+
+.nav-wrap{
+    overflow: auto;
+    position: fixed;
+    right: -90%;
+    top: 0;
+    width: 90%;
+    height: 100%;
+    background: #dc2828;
+    transition: .5s;
+    z-index: 110;
+    color: #fff;
+
+    // js 메뉴 활성화
+    &.active{
+        right: 0;
+    }
+    // js 메뉴닫기버튼
+    .top-area{
+        position: relative;
+        height: 100px;
+        .logo{
+            a{
+                background-position: 80px -29px;
+                background: url(../images/logo/sp-bg01.png) no-repeat;
+                width: 123px;
+                height: 50px;
+                background-size: 100%;
+                display: block;
+                // background: #000;
+                position: absolute;
+                top: -8px;left: 33px;
+                z-index: 100;
+            }
+
+        }
+    }//top-area
+    .btn-close{
+        position: absolute;
+        right: 10px;
+        top: 14px;
+        padding: 20px;
+        cursor: pointer;
+        width: 25px;
+        height: 19px;
+        span{
+            z-index: 100;
+            background: #fff;
+            position: absolute;
+            top: 17px;
+            right: 13px;
+            transform: rotate(45deg);
+            width: 20px;
+            height: 2px;
+            &:nth-child(2n){
+                top: 17px;
+                transform: rotate(-45deg);
+            }
+
+        }
+    }//btn-close
+    .nav-list{
+        margin-left: 30px;
+        .nav-item{
+            font-size: 37px;
+            +.nav-item{
+                margin-top: 8px;
+            }
+        }
+        a{
+            display: inline-block;
+            &:hover{
+            color: #fff;
+            }
+        }
+    }//nav-list
+    .text{
+        position: absolute;
+        bottom: 10px;
+        margin-left: 30px;
+    }
+    
+}//nav-wrap

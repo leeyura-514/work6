@@ -1,0 +1,57 @@
+// common의 용도
+// @import url('https://cdn.jsdelivr.net/g h/orioncactus/pretendard/dist/web/static/pretendard.css');
+// css 적용안되서 html link적용으로 수정
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+
+body{
+    color: #3f3f3f;
+    // background-color: #f3efed;
+    background-color: rgba(255,255,255,0.96);
+    font-family: 'Poppins', Pretendard,  sans-serif;
+    padding-top: 55px;
+    // 영문폰트는 국문을 지원하지않음
+    &.scroll-hidden{
+        overflow: hidden;
+        
+        .dimmed{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 100;
+        }
+    }
+    @include laptop {
+        padding-top: 40px;
+    }
+}
+.blind{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+}
+
+
+// sp-bg01
+.header-area .logo a,
+.footer-area .customer-area .logo{
+    background: url(../images/logo/sp-bg01.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+// sp-bg04
+.sc-introduce .info-box .android::before,
+.sc-introduce .info-box .ios::before {
+    background: url(../images/icon/sp-bg04.png);
+    background-repeat: no-repeat;
+    background-size: 200px auto;
+}
+
+

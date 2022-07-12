@@ -1,0 +1,67 @@
+//컴포넌트(소형 레이아웃)
+.link-direct{
+    display: inline-block;
+    min-width: 64px;
+    height: 39px;
+    padding: 0 40px 0 20px;
+    font-size: 13px;
+    line-height: 37px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    background-color: transparent;
+    @include tablet{
+        height: 33px;
+        padding: 0px 30px 0 15px;
+        font-size: 12px;
+        line-height: 32px;
+    }
+    .link-text{
+        position: relative;
+        margin-right: 10px;
+        &::after{
+            content: '';
+            display: inline-block;
+            position: absolute;
+            background: #fff;
+            top: 0px;
+            right: -34px;
+            background: url(../images/icon/link-arr.png) no-repeat;
+            width: 18px; height: 18px;
+            background-size: 100%;
+            @include tablet{
+                top: 0px;
+                right: -25px;
+            }
+        }
+    }
+
+}//link-direct
+
+.link-more{
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid #3f3f3f;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-size: 25px;
+    padding: 15px 70px;
+    @include laptop{
+        font-size: 16px;
+        padding: 10px 30px;
+    }
+    @include tablet{
+        font-size: 14px;
+        padding: 5px 20px
+    }
+    @include mobile{
+        font-size: 10px;
+        padding: 5px 15px;
+        bottom: 12%;
+    }
+    &:hover{
+        color: #dc2828;
+        border-color: #dc2828;
+    }
+}
