@@ -1,6 +1,31 @@
 
 /* sass 반응형 */ 
 ScrollTrigger.matchMedia({
+  "(max-width: 768px)": function() {
+    // The ScrollTriggers created inside these functions are segregated and get
+    // reverted/killed when the media query doesn't match anymore. 
+    console.log('모바일에서만 사용')
+
+
+
+    /**
+    * 메뉴 클릭 시, 특정 영역으로 이동
+    * @version 1.0.0
+    * @since 2022-06-18
+    * @author 이유라 (Nico)
+    * @memo
+    */   
+    $('.nav-item a').click(function(e){
+      e.preventDefault();
+
+      target =  $(this).data('target');
+      gsap.to(window, {duration: .7, scrollTo:target});
+
+    })
+       
+  },//
+
+
   // small
   "(min-width: 768px)": function() {
     // The ScrollTriggers created inside these functions are segregated and get
