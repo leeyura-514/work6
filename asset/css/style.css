@@ -462,7 +462,7 @@ body.scroll-hidden .dimmed { position: fixed; top: 0; left: 0; width: 100%; heig
 
 @media (max-width: 767px) { .sc-introduce .info-box p { line-height: 16px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; } }
 
-.sc-introduce .info-box .link-box { position: absolute; bottom: 2vw; }
+.sc-introduce .info-box .link-box { position: absolute; bottom: 2vw; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
 
 @media (max-width: 480px) { .sc-introduce .info-box .link-box { bottom: 4vw; } }
 
@@ -470,7 +470,7 @@ body.scroll-hidden .dimmed { position: fixed; top: 0; left: 0; width: 100%; heig
 
 @media (max-width: 1023px) { .sc-introduce .info-box .link-box .link { font-size: 10px; } }
 
-.sc-introduce .info-box .link-box .link + .link { margin-left: 10px; }
+.sc-introduce .info-box .link-box .link + .link { margin: 0 0 0 10px; }
 
 .sc-introduce .info-box .link-box .link .android { position: relative; padding-left: 18px; }
 

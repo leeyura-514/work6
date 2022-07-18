@@ -593,9 +593,12 @@
         .link-box {
             position: absolute;
             bottom: 2vw;
+            display: flex;
+            justify-content: space-between;
             @include mobile{
                 bottom: 4vw;
             }
+          
             .link {
                 border: 1px solid #939393;
                 color: #939393;
@@ -606,8 +609,9 @@
                 @include laptop{
                     font-size: 10px;
                 }
+               
                 +.link {
-                    margin-left: 10px;
+                    margin: 0 0 0 10px;
                 }
                 .android {
                     position: relative;
