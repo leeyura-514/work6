@@ -466,7 +466,7 @@ body.scroll-hidden .dimmed { position: fixed; top: 0; left: 0; width: 100%; heig
 
 @media (max-width: 480px) { .sc-introduce .info-box .link-box { bottom: 4vw; } }
 
-.sc-introduce .info-box .link-box .link { border: 1px solid #939393; color: #939393; border-radius: 20px; height: 20px; padding: 3px 10px; font-size: 12px; }
+.sc-introduce .info-box .link-box .link { border: 1px solid #939393; color: #939393; border-radius: 20px; height: 20px; padding: 1px 10px; font-size: 12px; }
 
 @media (max-width: 1023px) { .sc-introduce .info-box .link-box .link { font-size: 10px; } }
 
